@@ -11,11 +11,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Classe de teste criada para garantir o funcionamento das principais operações
+ * Classe de teste criada para garantir o funcionamento das principais operaÃ§Ãµes
  * sobre clientes, realizadas pela classe {@link GerenciadoraClientes}.
  * 
- * @author Gustavo Farias
- * @date 21/01/2035 
+ * @jeferson
+ * @date 21/01/2019 
  */
 public class GerenciadoraClientesTest_Ex7 {
 
@@ -26,7 +26,7 @@ public class GerenciadoraClientesTest_Ex7 {
 	@Before
 	public void setUp() {
 	
-		/* ========== Montagem do cenário ========== */
+		/* ========== Montagem do cenÃ¡rio ========== */
 		
 		// criando alguns clientes
 		Cliente cliente01 = new Cliente(idCLiente01, "Gustavo Farias", 31, "gugafarias@gmail.com", 1, true);
@@ -50,35 +50,35 @@ public class GerenciadoraClientesTest_Ex7 {
 	}
 	
 	/**
-	 * Teste básico da pesquisa de um cliente a partir do seu ID.
+	 * Teste bÃ¡sico da pesquisa de um cliente a partir do seu ID.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testPesquisaCliente() {
 
-		/* ========== Execução ========== */
+		/* ========== ExecuÃ§Ã£o ========== */
 		Cliente cliente = gerClientes.pesquisaCliente(idCLiente01);
 		
-		/* ========== Verificações ========== */
+		/* ========== VerificaÃ§Ãµes ========== */
 		assertThat(cliente.getId(), is(idCLiente01));
 		
 	}
 	
 	/**
-	 * Teste básico da remoção de um cliente a partir do seu ID.
+	 * Teste bÃ¡sico da remoÃ§Ã£o de um cliente a partir do seu ID.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testRemoveCliente() {
 		
-		/* ========== Execução ========== */
+		/* ========== ExecuÃ§Ã£o ========== */
 		boolean clienteRemovido = gerClientes.removeCliente(idCLiente02);
 		
-		/* ========== Verificações ========== */
+		/* ========== VerificaÃ§Ãµes ========== */
 		assertThat(clienteRemovido, is(true));
 		assertThat(gerClientes.getClientesDoBanco().size(), is(1));
 		assertNull(gerClientes.pesquisaCliente(idCLiente02));
@@ -86,4 +86,4 @@ public class GerenciadoraClientesTest_Ex7 {
 	}
 	
 }
-// Como Ganhar Tempo e Otimizar Testes com Cenários Parecidos
+// Como Ganhar Tempo e Otimizar Testes com CenÃ¡rios Parecidos
