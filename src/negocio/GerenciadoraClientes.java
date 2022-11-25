@@ -3,8 +3,8 @@ package negocio;
 import java.util.List;
 
 /**
- * Classe de negÛcio para realizar operaÁıes sobre os clientes do banco.
- * @author Gustavo Farias
+ * Classe de neg√≥cio para realizar opera√ß√µes sobre os clientes do banco.
+ * @jeferson
  */
 public class GerenciadoraClientes {
 
@@ -25,7 +25,7 @@ public class GerenciadoraClientes {
 	/**
 	 * Pesquisa por um cliente a partir do seu ID.
 	 * @param idCliente id do cliente a ser pesquisado
-	 * @return o cliente pesquisado ou null, caso n„o seja encontrado
+	 * @return o cliente pesquisado ou null, caso n√£o seja encontrado
 	 */
 	public Cliente pesquisaCliente (int idCliente) {
 
@@ -37,7 +37,7 @@ public class GerenciadoraClientes {
 	}
 	
 	/**
-	 * Adiciona um novo cliente ‡ lista de clientes do banco.
+	 * Adiciona um novo cliente √† lista de clientes do banco.
 	 * @param novoCliente novo cliente a ser adicionado
 	 */
 	public void adicionaCliente (Cliente novoCliente) {
@@ -47,7 +47,7 @@ public class GerenciadoraClientes {
 	/**
 	 * Remove cliente da lista de clientes do banco.
 	 * @param idCliente ID do cliente a ser removido 
-	 * @return true se o cliente foi removido. False, caso contr·rio.
+	 * @return true se o cliente foi removido. False, caso contr√°rio.
 	 */
 	public boolean removeCliente (int idCliente) {
 		boolean clienteRemovido = false;
@@ -65,9 +65,9 @@ public class GerenciadoraClientes {
 	}
 
 	/**
-	 * Informa se um determinado cliente est· ativo ou n„o.
-	 * @param idCliente ID do cliente cujo status ser· verificado
-	 * @return true se o cliente est· ativo. False, caso contr·rio. 
+	 * Informa se um determinado cliente est√° ativo ou n√£o.
+	 * @param idCliente ID do cliente cujo status ser√° verificado
+	 * @return true se o cliente est√° ativo. False, caso contr√°rio. 
 	 */
 	public boolean clienteAtivo (int idCliente) {
 		boolean clienteAtivo = false;
@@ -92,8 +92,8 @@ public class GerenciadoraClientes {
 	}
 	
 	/**
-	 * Valida se a idade do cliente est· dentro do intervalo permitido (18 - 65).
-	 * @param idade a idade do possÌvel novo cliente
+	 * Valida se a idade do cliente est√° dentro do intervalo permitido (18 - 65).
+	 * @param idade a idade do poss√≠vel novo cliente
 	 */
 	public boolean validaIdade(int idade) throws IdadeNaoPermitidaException {
 	
