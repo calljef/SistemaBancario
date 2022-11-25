@@ -2,8 +2,8 @@ package negocio;
 
 /**
  * Classe {@link ContaCorrente} que representa uma conta corrente real
- * e que poder· ser associada a um cliente.
- * @author Gustavo Farias
+ * e que poder√° ser associada a um cliente.
+ * @jeferson
  */
 public class ContaCorrente {
 	
@@ -20,7 +20,7 @@ public class ContaCorrente {
 	}
 
 	/**
-	 * MÈtodo que retorna o ID da conta corrente. 
+	 * M√©todo que retorna o ID da conta corrente. 
 	 * @return ID da conta corrente
 	 */
 	public int getId() {
@@ -28,14 +28,14 @@ public class ContaCorrente {
 	}
 
 	/**
-	 * MÈtodo que atualiza o ID da conta corrente. 
+	 * M√©todo que atualiza o ID da conta corrente. 
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
 	/**
-	 * MÈtodo que retorna o saldo da conta corrente. 
+	 * M√©todo que retorna o saldo da conta corrente. 
 	 * @return saldo da conta corrente
 	 */
 	public double getSaldo() {
@@ -43,14 +43,14 @@ public class ContaCorrente {
 	}
 
 	/**
-	 * MÈtodo que atualiza o saldo da conta corrente. 
+	 * M√©todo que atualiza o saldo da conta corrente. 
 	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
 	/**
-	 * MÈtodo que retorna o status da conta corrente, podendo ser Ativa ou Inativa. 
+	 * M√©todo que retorna o status da conta corrente, podendo ser Ativa ou Inativa. 
 	 * @return status da conta corrente
 	 */
 	public boolean isAtiva() {
@@ -58,15 +58,15 @@ public class ContaCorrente {
 	}
 
 	/**
-	 * MÈtodo que atualiza o status da conta corrente. 
+	 * M√©todo que atualiza o status da conta corrente. 
 	 */
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
 	}
 	
 	/**
-	 * MÈtodo que retorna a representaÁ„o textual de uma conta corrente. 
-	 * @return representaÁ„o textual da conta corrente
+	 * M√©todo que retorna a representa√ß√£o textual de uma conta corrente. 
+	 * @return representa√ß√£o textual da conta corrente
 	 */
 	@Override
 	public String toString() {
