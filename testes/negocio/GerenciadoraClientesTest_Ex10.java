@@ -11,11 +11,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Classe de teste criada para garantir o funcionamento das principais operaÁıes
+ * Classe de teste criada para garantir o funcionamento das principais opera√ß√µes
  * sobre clientes, realizadas pela classe {@link GerenciadoraClientes}.
  * 
- * @author Gustavo Farias
- * @date 21/01/2035 
+ * @jeferson
+ * @date 21/01/2019 
  */
 public class GerenciadoraClientesTest_Ex10 {
 
@@ -26,7 +26,7 @@ public class GerenciadoraClientesTest_Ex10 {
 	@Before
 	public void setUp() {
 	
-		/* ========== Montagem do cen·rio ========== */
+		/* ========== Montagem do cen√°rio ========== */
 		
 		// criando alguns clientes
 		Cliente cliente01 = new Cliente(idCLiente01, "Gustavo Farias", 31, "gugafarias@gmail.com", 1, true);
@@ -46,52 +46,52 @@ public class GerenciadoraClientesTest_Ex10 {
 	}
 	
 	/**
-	 * Teste b·sico da pesquisa de um cliente a partir do seu ID.
+	 * Teste b√°sico da pesquisa de um cliente a partir do seu ID.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testPesquisaCliente() {
 
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		Cliente cliente = gerClientes.pesquisaCliente(idCLiente01);
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertThat(cliente.getId(), is(idCLiente01));
 		
 	}
 	
 	/**
-	 * Teste b·sico da pesquisa por um cliente que n„o existe.
+	 * Teste b√°sico da pesquisa por um cliente que n√£o existe.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testPesquisaClienteInexistente() {
 
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		Cliente cliente = gerClientes.pesquisaCliente(1001);
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertNull(cliente);
 		
 	}
 	
 	/**
-	 * Teste b·sico da remoÁ„o de um cliente a partir do seu ID.
+	 * Teste b√°sico da remo√ß√£o de um cliente a partir do seu ID.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testRemoveCliente() {
 		
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		boolean clienteRemovido = gerClientes.removeCliente(idCLiente02);
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertThat(clienteRemovido, is(true));
 		assertThat(gerClientes.getClientesDoBanco().size(), is(1));
 		assertNull(gerClientes.pesquisaCliente(idCLiente02));
@@ -99,125 +99,125 @@ public class GerenciadoraClientesTest_Ex10 {
 	}
 	
 	/**
-	 * Teste da tentativa de remoÁ„o de um cliente inexistente.
+	 * Teste da tentativa de remo√ß√£o de um cliente inexistente.
 	 * 
-	 * @author Gustavo Farias
-	 * @date 21/01/2035
+	 * @jeferson
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testRemoveClienteInexistente() {
 
 	
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		boolean clienteRemovido = gerClientes.removeCliente(1001);
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertThat(clienteRemovido, is(false));
 		assertThat(gerClientes.getClientesDoBanco().size(), is(2));
 		
 	}
 	
 	/**
-	 * ValidaÁ„o da idade de um cliente quando a mesma est· no intervalo permitido.
+	 * Valida√ß√£o da idade de um cliente quando a mesma est√° no intervalo permitido.
 	 * 
-	 * @author Gustavo Farias
+	 * @jeferson
 	 * @throws IdadeNaoPermitidaException 
-	 * @date 21/01/2035
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testClienteIdadeAceitavel() throws IdadeNaoPermitidaException {
 
-		/* ========== Montagem do Cen·rio ========== */		
+		/* ========== Montagem do Cen√°rio ========== */		
 		Cliente cliente = new Cliente(1, "Gustavo", 25, "guga@gmail.com", 1, true);
 		
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		boolean idadeValida = gerClientes.validaIdade(cliente.getIdade());
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertTrue(idadeValida);	
 	}
 	
 	/**
-	 * ValidaÁ„o da idade de um cliente quando a mesma est· no intervalo permitido.
+	 * Valida√ß√£o da idade de um cliente quando a mesma est√° no intervalo permitido.
 	 * 
-	 * @author Gustavo Farias
+	 * @jeferson
 	 * @throws IdadeNaoPermitidaException 
-	 * @date 21/01/2035
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testClienteIdadeAceitavel_02() throws IdadeNaoPermitidaException {
 
-		/* ========== Montagem do Cen·rio ========== */		
+		/* ========== Montagem do Cen√°rio ========== */		
 		Cliente cliente = new Cliente(1, "Gustavo", 18, "guga@gmail.com", 1, true);
 		
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		boolean idadeValida = gerClientes.validaIdade(cliente.getIdade());
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertTrue(idadeValida);	
 	}
 	
 	/**
-	 * ValidaÁ„o da idade de um cliente quando a mesma est· no intervalo permitido.
+	 * Valida√ß√£o da idade de um cliente quando a mesma est√° no intervalo permitido.
 	 * 
-	 * @author Gustavo Farias
+	 * @jeferson
 	 * @throws IdadeNaoPermitidaException 
-	 * @date 21/01/2035
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testClienteIdadeAceitavel_03() throws IdadeNaoPermitidaException {
 
-		/* ========== Montagem do Cen·rio ========== */		
+		/* ========== Montagem do Cen√°rio ========== */		
 		Cliente cliente = new Cliente(1, "Gustavo", 65, "guga@gmail.com", 1, true);
 		
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		boolean idadeValida = gerClientes.validaIdade(cliente.getIdade());
 		
-		/* ========== VerificaÁıes ========== */
+		/* ========== Verifica√ß√µes ========== */
 		assertTrue(idadeValida);	
 	}
 	
 	/**
-	 * ValidaÁ„o da idade de um cliente quando a mesma est· abaixo intervalo permitido.
+	 * Valida√ß√£o da idade de um cliente quando a mesma est√° abaixo intervalo permitido.
 	 * 
-	 * @author Gustavo Farias
+	 * @jeferson
 	 * @throws IdadeNaoPermitidaException 
-	 * @date 21/01/2035
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testClienteIdadeAceitavel_04() throws IdadeNaoPermitidaException {
 
-		/* ========== Montagem do Cen·rio ========== */		
+		/* ========== Montagem do Cen√°rio ========== */		
 		Cliente cliente = new Cliente(1, "Gustavo", 17, "guga@gmail.com", 1, true);
 
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		try {
 			gerClientes.validaIdade(cliente.getIdade());
 			fail();
 		} catch (Exception e) {
-			/* ========== VerificaÁıes ========== */
+			/* ========== Verifica√ß√µes ========== */
 			assertThat(e.getMessage(), is(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA));
 		}	
 	}
 	
 	/**
-	 * ValidaÁ„o da idade de um cliente quando a mesma est· acima intervalo permitido.
+	 * Valida√ß√£o da idade de um cliente quando a mesma est√° acima intervalo permitido.
 	 * 
-	 * @author Gustavo Farias
+	 * @jeferson
 	 * @throws IdadeNaoPermitidaException 
-	 * @date 21/01/2035
+	 * @date 21/01/2019
 	 */
 	@Test
 	public void testClienteIdadeAceitavel_05() throws IdadeNaoPermitidaException {
 		
-		/* ========== Montagem do Cen·rio ========== */		
+		/* ========== Montagem do Cen√°rio ========== */		
 		Cliente cliente = new Cliente(1, "Gustavo", 66, "guga@gmail.com", 1, true);
-		/* ========== ExecuÁ„o ========== */
+		/* ========== Execu√ß√£o ========== */
 		try {
 			gerClientes.validaIdade(cliente.getIdade());
 			fail();
 		} catch (Exception e) {
-			/* ========== VerificaÁıes ========== */
+			/* ========== Verifica√ß√µes ========== */
 			assertThat(e.getMessage(), is(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA));
 		}	
 	}
